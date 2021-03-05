@@ -10,7 +10,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="10" />
             <RowDefinition Height="50" />
-            <RowDefinition Height="100" />
+            <RowDefinition Height="140" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <!-- Define Header title -->
@@ -28,8 +29,15 @@
                 <TextBlock x:Name="tbBrokerPortLabel" Text="Broker Port : " Margin="10" Padding="5"/>
                 <TextBox x:Name="tbBrokerPortInput" Text="1883" Width="200" Margin="10" Padding="5"/>
             </StackPanel>
+            <!-- broker topic display -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock x:Name="tbBrokerTopicLabel" Text="Topic : " Margin="10" Padding="5"/>
+                <TextBox x:Name="tbBrokerTopicInput" Text="#" Width="200" Margin="10" Padding="5" IsEnabled="False"/>
+            </StackPanel>
         </StackPanel>
+        <!-- main actionner to start and stop the workflow -->
+        <Button x:Name="btnManageWorkflow" Grid.Row="3" Content="Start Workflow" Margin="10" Click="btnManageWorkflow_Click"/>
         <!-- main console display information -->
-        <ListView x:Name="listConsole" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10"/>
+        <ListView x:Name="listConsole" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10"/>
     </Grid>
 </Window>
