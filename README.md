@@ -20,6 +20,10 @@ Then, this program the [M2MMqtt](https://github.com/mohaqeq/paho.mqtt.m2mqtt) nu
 
 Finally, this project integrate a nuget **ElaWirepasLibrary** developped by ELA Innovation that you can find [here](https://www.nuget.org/packages/ElaWirepasLibrary/). The ony class used in this library is the factory.
 
+Figure 1 illustrates how we can use Backend Client and how we can use this sample
+
+![here_schematics](https://github.com/elaInnovation/Wirepas-.Net-Sample/blob/master/Images/wirepas_sample_01.png)
+
 # Solution 
 
 ## Description
