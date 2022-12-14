@@ -5,39 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wirepas_ELA_Mesh_Sample"
         mc:Ignorable="d"
-        Title="ELA Blue MESH Sample" Height="450" Width="800">
+        Title="Wirepas network monitoring" Height="600" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10" />
             <RowDefinition Height="50" />
-            <RowDefinition Height="140" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="50" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <!-- Define Header title -->
         <Rectangle Height="1" Grid.Row="0" Margin="5,0,5,0" Fill="Black" />
-        <TextBlock x:Name="tbTitleDemo" Grid.Row="1" Text="Blue MESH console sample" FontSize="22" Margin="10"/>
+        <TextBlock x:Name="tbTitleDemo" Grid.Row="1" Text="Wirepas network monitoring" FontSize="22" Margin="10"/>
         <!-- broker informations inputs -->
-        <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Right">
-            <!-- broker hotname input -->
+        <StackPanel Grid.Row="2" Orientation="Vertical">
+            <!-- broker hostname input -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <TextBlock x:Name="tbBrokerHsotnameLabel" Text="Broker Hostname : " Margin="10" Padding="5"/>
-                <TextBox x:Name="tbBrokerHostnameInput" Text="127.0.0.1" Width="200" Margin="10" Padding="5"/>
+                <TextBlock x:Name="tbBrokerHsotnameLabel" Text="Broker Hostname: " Margin="10" Padding="5"/>
+                <TextBox x:Name="tbBrokerHostnameInput" Text="test.mosquitto.org" Width="400" Margin="10" Padding="5"/>
             </StackPanel>
             <!-- broker port input -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock x:Name="tbBrokerPortLabel" Text="Broker Port : " Margin="10" Padding="5"/>
-                <TextBox x:Name="tbBrokerPortInput" Text="1883" Width="200" Margin="10" Padding="5"/>
+                <TextBox x:Name="tbBrokerPortInput" Text="1883" Width="400" Margin="10" Padding="5"/>
             </StackPanel>
-            <!-- broker topic display -->
+            <!-- broker username input -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <TextBlock x:Name="tbBrokerTopicLabel" Text="Topic : " Margin="10" Padding="5"/>
-                <TextBox x:Name="tbBrokerTopicInput" Text="#" Width="200" Margin="10" Padding="5" IsEnabled="False"/>
+                <TextBlock x:Name="tbBrokerUsernameLabel" Text="Broker Username : " Margin="10" Padding="5"/>
+                <TextBox x:Name="tbBrokerUsernameInput" Width="400" Margin="10" Padding="5"/>
+            </StackPanel>
+            <!-- broker password input -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock x:Name="tbBrokerPasswordLabel" Text="Broker Password : " Margin="10" Padding="5"/>
+                <PasswordBox x:Name="tbBrokerPasswordInput" Width="400" Margin="10" Padding="5"/>
             </StackPanel>
         </StackPanel>
         <!-- main actionner to start and stop the workflow -->
         <Button x:Name="btnManageWorkflow" Grid.Row="3" Content="Start Workflow" Margin="10" Click="btnManageWorkflow_Click"/>
         <!-- main console display information -->
-        <ListView x:Name="listConsole" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10"/>
+        <ListView x:Name="listConsole" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" />
     </Grid>
 </Window>
