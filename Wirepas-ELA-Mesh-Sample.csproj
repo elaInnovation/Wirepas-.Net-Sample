@@ -65,7 +65,7 @@
       <HintPath>packages\ElaTagClassLibrary.2.2.16\lib\netstandard2.0\ElaTagClassLibrary.dll</HintPath>
     </Reference>
     <Reference Include="ElaWirepasLibrary, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\ElaWirepasLibrary.2.1.4\lib\net472\ElaWirepasLibrary.dll</HintPath>
+      <HintPath>packages\ElaWirepasLibrary.2.1.5\lib\net472\ElaWirepasLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.13.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.13.0\lib\net45\Google.Protobuf.dll</HintPath>

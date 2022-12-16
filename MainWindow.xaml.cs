@@ -101,7 +101,7 @@ namespace Wirepas_ELA_Mesh_Sample
                     if (int.TryParse(tbBrokerPortInput.Text, out var port))
                     {
                         m_mqttController = new WirepasMqttController(tbBrokerHostnameInput.Text, port);
-                        await m_mqttController.ConnectAsync();
+                        await m_mqttController.ConnectAsync(tbBrokerUsernameInput.Text, tbBrokerPasswordInput.Password, cbBrokerTlsInput.IsChecked.GetValueOrDefault(), tbBrokerCertInput.Text);
                         m_mqttController.evWirepasDataReceived += M_mqttController_evWirepasDataReceived;
                         await m_mqttController.StartListeningToNodeDataAsync();
                         //
@@ -136,7 +136,7 @@ namespace Wirepas_ELA_Mesh_Sample
                 WriteLine("");
                 WriteLine($"Data Received : {device.identification.nodeAddress}");
                 if (device?.sensor != null) WriteLine($"\t{device.sensor}");
-                if (device?.diagnostic != null) WriteLine($"\t{device.diagnostic.batteryVoltage} mV");
+                if (device?.diagnostic != null) WriteLine($"\t{device.diagnostic.batteryVoltage}");
                 if (device?.localization != null) WriteLine(($"\t{string.Join(", ", device.localization.rawDataPoints.Select(p => $"{p.provider.anchorNodeAddress}: {p.rssi} dB"))}"));
             }));
         }

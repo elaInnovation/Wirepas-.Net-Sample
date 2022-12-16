@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wirepas_ELA_Mesh_Sample"
         mc:Ignorable="d"
-        Title="Wirepas network monitoring" Height="600" Width="800">
+        Title="Wirepas network monitoring" Height="600" Width="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10" />
@@ -26,18 +26,28 @@
             </StackPanel>
             <!-- broker port input -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <TextBlock x:Name="tbBrokerPortLabel" Text="Broker Port : " Margin="10" Padding="5"/>
+                <TextBlock x:Name="tbBrokerPortLabel" Text="Broker Port: " Margin="10" Padding="5"/>
                 <TextBox x:Name="tbBrokerPortInput" Text="1883" Width="400" Margin="10" Padding="5"/>
             </StackPanel>
             <!-- broker username input -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <TextBlock x:Name="tbBrokerUsernameLabel" Text="Broker Username : " Margin="10" Padding="5"/>
-                <TextBox x:Name="tbBrokerUsernameInput" Width="400" Margin="10" Padding="5"/>
+                <TextBlock x:Name="tbBrokerUsernameLabel" Text="Broker Username: " Margin="10" Padding="5"/>
+                <TextBox x:Name="tbBrokerUsernameInput" Text=""  Width="400" Margin="10" Padding="5"/>
             </StackPanel>
             <!-- broker password input -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <TextBlock x:Name="tbBrokerPasswordLabel" Text="Broker Password : " Margin="10" Padding="5"/>
-                <PasswordBox x:Name="tbBrokerPasswordInput" Width="400" Margin="10" Padding="5"/>
+                <TextBlock x:Name="tbBrokerPasswordLabel" Text="Broker Password: " Margin="10" Padding="5"/>
+                <PasswordBox x:Name="tbBrokerPasswordInput" Password=""  Width="400" Margin="10" Padding="5"/>
+            </StackPanel>
+            <!-- TLS -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock x:Name="tbBrokerTlsLabel" Text="Use TLS: " Margin="10" Padding="5"/>
+                <CheckBox x:Name="cbBrokerTlsInput" Width="400" IsChecked="false" Margin="10" Padding="5" VerticalAlignment="Center"/>
+            </StackPanel>
+            <!-- broker certificate -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock x:Name="tbBrokerCertLabel" Text="Certificate path: " Margin="10" Padding="5"/>
+                <TextBox x:Name="tbBrokerCertInput" Width="400" Margin="10" Padding="5"/>
             </StackPanel>
         </StackPanel>
         <!-- main actionner to start and stop the workflow -->
